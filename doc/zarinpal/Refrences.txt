@@ -1,0 +1,18 @@
+راهنمای اتصال به درگاه اینترنتی زرین‌پال :
+
+https://docs.zarinpal.com/paymentGateway/guide/#%D8%A7%D8%B1%D8%B3%D8%A7%D9%84-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA
+
+zarinpal-checkout:
+
+https://www.npmjs.com/package/zarinpal-checkout
+
+نمونه کد ها :
+
+https://www.zarinpal.com/lab/category/samplecode/
+
+سایت زرین پال :
+
+https://www.zarinpal.com/
+
+
+

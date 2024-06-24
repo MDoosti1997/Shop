@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs') %> <%- include('../includes/heading.ejs') %>
+<%- include('../includes/navigation.ejs') %>
+
+<main>
+  <% if(refid) { %>
+  <div class="alert alert-success">
+    <h4>
+
+      تراکنش شما با موفقیت انجام شد
+      <hr>
+      شماره تراکنش:<%= refid %>
+
+    </h4>
+  </div>
+  <% } %>
+
+  <% if(orders.length<=0) { %>
+  <h2>سفارشی ثبت نشده</h2>
+  <% } else{ %>
+  <ul class="orders">
+    <% orders.forEach(order=> { %>
+    <li class="orders_item">
+      <h1>سفارش - <%= order._id %></h1>
+      <ul class="orders_products"><a href="/invoices/<%=order._id %>">گزارش</a>
+        <% order.products.forEach(p=>{ %>
+        <li class="orders_products_item">
+          <%= p.product.title %> <br> ( <%= p.quantity %> )
+        </li>
+
+        <% }); %>
+      </ul>
+    </li>
+
+    <% }); %>
+  </ul>
+
+  <% } %>
+</main>
+
+<%- include('../includes/end.ejs') %>
